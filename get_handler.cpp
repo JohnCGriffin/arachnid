@@ -62,6 +62,11 @@ namespace arachnid {
     return match == entries.end() ? defaultHandler : match->handler;
   }
 
+  
+  // multiple configuration entries may probably point
+  // to the same port, e.g. 80.  One listening socket
+  // per port is needed in the main loop.
+  
   std::set<int> getConfiguredPorts()
   {
     std::set<int> ports;

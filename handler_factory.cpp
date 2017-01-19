@@ -12,6 +12,12 @@ unknown static initialization order across
 files, I've opted to have the registrar act
 both as the depositor and extractor of Handler
 instances mapped to names.
+
+There could be a common structure that knows
+about all the implementations.  However, this
+method allows each implementation to register
+itself without coupling the knowledge of its
+existence with that common structure.
 ********************************************/
 
 namespace arachnid {

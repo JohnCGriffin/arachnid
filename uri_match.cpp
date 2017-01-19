@@ -7,7 +7,9 @@
 
 namespace arachnid {
 
-  bool Specified_URI::matches (const std::string& uri) {
+  Specified_URI::Specified_URI (std::string name) : name(name){} 
+
+  bool Specified_URI::matches (const std::string& uri) const {
     return starts_with(uri, name);
   }
 

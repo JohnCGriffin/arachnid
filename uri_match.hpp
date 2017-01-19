@@ -17,15 +17,15 @@ namespace arachnid {
 
   class URIMatcher {
   public:
-    virtual bool matches (const std::string &uri) = 0;
+    virtual bool matches (const std::string &uri) const = 0;
     virtual ~URIMatcher(){}
   };
 
   class Specified_URI : public URIMatcher {
     std::string name;
   public:
-    Specified_URI (std::string name) : name(name){} 
-    bool matches (const std::string& uri);
+    Specified_URI (std::string name);
+    bool matches (const std::string& uri) const override;
   };
 
 }

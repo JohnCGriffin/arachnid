@@ -172,7 +172,7 @@ namespace arachnid {
     return 0;
   }
 
-#if HAS_UNDERLYING_TYPE
+#ifdef HAS_UNDERLYING_TYPE
   int toInt (const ResponseCode& c){
 	return static_cast<std::underlying_type<ResponseCode>::type>(c);
   }

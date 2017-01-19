@@ -39,7 +39,7 @@ namespace arachnid {
     return "";
   }
 
-  void decorate ( HTTPRequest& req, HTTPResponse& res, bool hasCppFile )
+  static void decorate ( HTTPRequest& req, HTTPResponse& res, bool hasCppFile )
   {
     std::ostringstream oss;
     for(char ch : res.content){

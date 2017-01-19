@@ -61,6 +61,9 @@ int main(int argc, const char** argv)
 
     std::set<pthread_t> threads;
 
+    // #ports <= #configuration-entries, i.e. the socket has no idea of
+    // the intent until the input request is parsed.
+    
     for(auto port : getConfiguredPorts()){
       pthread_t p;
       if(pthread_create(&p, 0, service_main, (void*) (long) port)){
@@ -81,4 +84,5 @@ int main(int argc, const char** argv)
     return 1;
   }
 }
+
 
