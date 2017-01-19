@@ -1,8 +1,7 @@
-arachnid
+arachnid - web server studies
 ========
 
-Arachnid web server studies
-
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Spider.svg/60px-Spider.svg.png) 
 It's *NOT* a usable web server.  Nginx is.
 
 Arachnid is an HTTP 1.1 web server written in C++ with a syntax highlighter in Flex.  It's for me to 
