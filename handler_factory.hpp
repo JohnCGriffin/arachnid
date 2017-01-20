@@ -7,6 +7,10 @@
 #include <string>
 #include <map>
 
+/* This is all about getting around
+   not having defined order in C++
+   static initialization. */
+
 namespace arachnid {
 
   typedef Handler* (*HandlerFactory)(SSMap);
